@@ -21,6 +21,7 @@ different states of India. The Site has a model to detects the probability of co
 <li> Machine Learning </li>
 <li> Flask </li>
 <li> WebScraping</li>
+</ol>
 
 ***
 <h3>Screenshots</h3>
