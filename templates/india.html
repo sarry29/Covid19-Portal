@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>India Report</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">COVID-19 Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('globalAffect') }}" tabindex="-1" aria-disabled="true">Global Affect</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('overallDetails') }}" tabindex="-1" aria-disabled="true">Covid-19 Details Globally</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('indiaReport') }}" tabindex="-1" aria-disabled="true">India</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('covidDetect') }}" tabindex="-1" aria-disabled="true">Covid-19 Detector</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+      <div>
+        <h1 class="display-4 text-center">COVID-19 CORONAVIRUS PANDEMIC</h1><br>
+        
+        <h3 class="text-center"> <br> India Report</h3>
+          <p class="text-center table table-dark">
+            Total Cases : <b>{{tcase2}}</b> <br>
+            Active Cases : <b>{{acase2}}</b><br>
+            New Active Cases : <b>{{nacase2}}</b><br>
+            Death Cases : <b>{{death2}}</b><br>
+            New Death Cases : <b>{{ndeath2}}</b> <br>
+            last Updated : <b>{{lastUpdatedAtApify2}}</b><br>
+            previousDay Tests : <b>{{previousDayTests2}}</b><br> 
+            Recovered Cases : <b>{{recovered2}}</b><br>
+            New Recored Cases : <b>{{nRecovered2}}</b><br>
+          </p>  
+        </div>
+
+        <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">State</th>
+                <th scope="col">Active<br> Cases</th>
+                <th scope="col">Deceased </th>
+                <th scope="col">New <br> Deceased</th>
+                <th scope="col"> Recovered</th>
+                <th scope="col">New <br> Recovered</th>
+                <th scope="col">Total <br> Infected</th>
+            
+              </tr>
+            </thead>
+            <tbody>
+              
+              {%  for i in range(0,len2) %}
+              <tr>
+              <th scope="row">{{i+1}}</th>
+              <td >{{region1[i]}}</th>
+              <td >{{acase1[i]}}</th>
+              <td >{{deceased1[i]}}</th>
+              <td >{{newDeceased1[i]}}</th>
+              <td >{{recovered1[i]}}</th>
+              <td >{{newRecovered1[i]}}</th>
+              <td >{{totalInfected1[i]}}</th> 
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+      </div>
+    
+      <footer class="text-center text-white" style="background-color: #f1f1f1;">
+        <!-- Grid container -->
+        <div class="container pt-4">
+          <section class="mb-4">
+            
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <div class="container">
+                <a  href="https://www.linkedin.com/in/rabdeep-singh-kharbanda-35616b206/" class="fa fa-linkedin" style="margin-right: 1em;font-size: larger;" target="_blank">
+                  </a>
+                  
+                  <a href="https://www.github.com/sarry29" style="margin-right: 1em;font-size: larger;" class="fa fa-github" target="_blank">
+                  </a>
+
+              <a href="https://twitter.com/RabdeepSinghKh1" class="fa fa-twitter" style="margin-right: 1em;font-size: larger;" target="_blank">
+                
+              </a>
+              
+              <a href="https://www.facebook.com/harrysingh.kharbanda" class="fa fa-facebook" style="margin-right: 1em;font-size: larger;" target="_blank">
+                </a>
+
+              <a href="https://instagram.com/sarry_29" class="fa fa-instagram" style="margin-right: 1em;font-size: larger;" target="_blank">
+                
+              </a>
+            
+            </div>
+            </section>
+        </div>
+      
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2021 Copyright: All right reserve to developer 
+          <br><b>Rabdeep Singh Kharbanda</b>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

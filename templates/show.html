@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="covid.ico" >
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>COVID-19 Probability Detector</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">COVID-19 Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('globalAffect') }}" tabindex="-1" aria-disabled="true">Global Affect</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('overallDetails') }}" tabindex="-1" aria-disabled="true">Covid-19 Details Globally</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('indiaReport') }}" tabindex="-1" aria-disabled="true">India</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('covidDetect') }}" tabindex="-1" aria-disabled="true">Covid-19 Detector</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container" style="margin-bottom: 14.2em;">
+        <h2 class="display-4 text-center mt-3">CoronaVirus Probability Detector</h2>
+        <p class="text-center " >Thanks for using COVID-19 Probability Detetector</p>
+        <p class="text-center" >Patient's Probability of Infection is {{inf}}%</p>
+     
+        <a href="/" >
+        <p class="text-center" >
+            <button class="btn btn-primary">GO BACK</button>
+        </p>
+        </a>
+    </div>
+
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+      <!-- Grid container -->
+      <div class="container pt-4">
+        <section class="mb-4">
+          
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+          <div class="container">
+              <a  href="https://www.linkedin.com/in/rabdeep-singh-kharbanda-35616b206/" class="fa fa-linkedin" style="margin-right: 1em;font-size: larger;" target="_blank">
+                </a>
+                
+                <a href="https://www.github.com/sarry29" style="margin-right: 1em;font-size: larger;" class="fa fa-github" target="_blank">
+                </a>
+
+            <a href="https://twitter.com/RabdeepSinghKh1" class="fa fa-twitter" style="margin-right: 1em;font-size: larger;" target="_blank">
+              
+            </a>
+            
+            <a href="https://www.facebook.com/harrysingh.kharbanda" class="fa fa-facebook" style="margin-right: 1em;font-size: larger;" target="_blank">
+              </a>
+
+            <a href="https://instagram.com/sarry_29" class="fa fa-instagram" style="margin-right: 1em;font-size: larger;" target="_blank">
+              
+            </a>
+          
+          </div>
+          </section>
+      </div>
+    
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright: All right reserve to developer 
+        <br><b>Rabdeep Singh Kharbanda</b>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
