@@ -68,7 +68,7 @@ def namePop():
     return sno,country,population
 
 def continentDetails():
-    url = 'https://www.worldometers.info/coronavirus/#countries'
+    url = 'enter api key for countries '
     r=get_data(url)
     bs = bs4.BeautifulSoup(r.text,'html.parser' )
     table = bs.findAll('table')[0]
@@ -152,7 +152,7 @@ def crct(X):
     return X
 
 def countryDetail():
-    url='https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true'
+    url='enter api key'
     r=requests.get(url)
 
     a=json.loads(r.text)
@@ -184,7 +184,7 @@ def countryDetail():
 
 
 def indiaDetail():
-    url = 'https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true'
+    url = 'enter api key for india'
     r=requests.get(url)
 
     # overall detail of india
