@@ -1,5 +1,5 @@
 # Covid19-Portal
-The Covid-19 portal is a website that shows Covid-19 Cases around the world and have a model to detect Covid-19
+The Covid-19 portal is a website that shows Covid-19 Cases around the world and have a model that detects the probability of covid-19 infection on basis of covid-19 symptoms
 <h3> Objective </h3>
 <ul>
 <li>
