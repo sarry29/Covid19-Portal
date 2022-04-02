@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 # open a file , where you stored model data ; load model ; close file
 
-file = open('coronamodel.pkl','rb')
+file = open('model/coronamodel.pkl','rb')
 lr = pickle.load(file)
 file.close()
 
@@ -68,7 +68,7 @@ def namePop():
     return sno,country,population
 
 def continentDetails():
-    url = 'enter api key for countries '
+    url = 'https://www.worldometers.info/coronavirus/#countries'
     r=get_data(url)
     bs = bs4.BeautifulSoup(r.text,'html.parser' )
     table = bs.findAll('table')[0]
@@ -152,10 +152,10 @@ def crct(X):
     return X
 
 def countryDetail():
-    url='enter api key'
+    url= 'https://api.apify.com/v2/key-value-stores/tVaYRsPHLjNdNBu7S/records/LATEST?disableRedirect=true'
     r=requests.get(url)
 
-    a=json.loads(r.text)
+    a = json.loads(r.text)
     di={}
     di['vl']=a
 
@@ -184,9 +184,8 @@ def countryDetail():
 
 
 def indiaDetail():
-    url = 'enter api key for india'
+    url = 'https://api.apify.com/v2/key-value-stores/toDWvRj1JpTXiM8FF/records/LATEST?disableRedirect=true'
     r=requests.get(url)
-
     # overall detail of india
     tcases2 = r.json()['totalCases']
     acase2 = r.json()["activeCases"] 
