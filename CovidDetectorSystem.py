@@ -218,15 +218,6 @@ def indiaDetail():
         recovered1.append( a['recovered'])
         totalInfected1.append( a['totalInfected'])
 
-    # for checking purpose
-    # print(len(region1))
-    # print(len(acase1))
-    # print(len(deceased1))
-    # print(len(newDeceased1))
-    # print(len(newRecovered1))
-    # print(len(recovered1))
-    # print(len(totalInfected1))
-
     return (region1,acase1,deceased1,newDeceased1,newRecovered1,recovered1,totalInfected1,
     tcases2,acase2 ,nacase2 ,death2 ,ndeath2 ,lastUpdatedAtApify2 ,previousDayTests2 ,recovered2 ,nRecovered2) 
 
